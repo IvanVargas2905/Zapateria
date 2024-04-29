@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/estilos_generales.css">
+    <title>¿Quienès somos?</title>
+
+    <style>
+        .google-map {
+            padding-bottom: 50%;
+            position: relative;
+        }
+
+        .google-map iframe {
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+
+        table td {
+            border: 2px solid brown;
+        }
+
+        /* a todos los div de la clase1 se le esta haciendo lo que le indicamos */
+        div.clase1 {
+            position: absolute;
+            right: 0;
+            border: 3px solid blue;
+            padding: 10px;
+        }
+    </style>
+    <script src="JS/reloj.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<!-- aqui le llamamos a la funcion para ver la hora -->
+
+<body onload="obtenerhora()">
+    <!-- Todo esto es para enlazar con la pagina principal -->
+    <div class="clase1" id="div_reloj">
+        <p>Reloj en operacion</p>
+    </div>
+    <h2>¿Quienès somos?</h2>
+    <hr />
+    <table>
+        <tr>
+            <td>
+                <img src="Imagen/fototec2.jpg" alt="Foto del tec con policia" style="width: 221;" height="97;">
+                <p>La <strong>zapateria pies contentos</strong> se fundo hace 30 años en la cuidad de Chihuahua</p>
+                <!-- El "strong es para las letras en negritas, importa los espacios" -->
+                <p>
+                    Distribuimos productos de las marcas
+                </p>
+                <!-- El ol es para lista ordenada. el type es para que la ordenacion sea con letras, romanos, y asi -->
+                <!-- La "<i></i> es para letras italicas" -->
+                <!-- El "<a>" es para poner links de paginas, el "_blank" es para que lo abra en otra pestaña, asi como esta acomodado, asi es como es para todo -->
+                <ol type="i">
+                    <li>
+                        <a href="https://www.flexi.com.mx/" target="_blank">
+                            <i>Flexi &reg;</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.nike.com/mx" target="_blank">
+                            <i>Nike &reg;</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.adidas.mx/" target="_blank">
+                            <i>Adidas &reg;</i>
+                        </a>
+                    </li>
+                </ol>
+            </td>
+            <td width="60%">
+                <!-- iframe subventana para crear una nueva ventana -->
+                <div class="google-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7396.317462970316!2d-106.11259070942522!3d28.709291069418953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea43003fde8c0d%3A0x196ee13ec863b11c!2sInstituto%20Tecnol%C3%B3gico%20de%20Chihuahua%20II!5e0!3m2!1ses-419!2smx!4v1707421245577!5m2!1ses-419!2smx"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <p></p>
+    <p>Ventas anuales de 6 anios (2019-2024)</p>
+    <div id="ventas_anuales" style="max-width:700px; height:400px">
+        <script>
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+
+                // Set Data
+                const data = google.visualization.arrayToDataTable([
+                    ['años', 'Ventas anuales (millones)'],
+                    ['2019', 200000],
+                    ['2020', 149000],
+                    ['2021', 44000],
+                    ['2022', 100000],
+                    ['2023', 86000]
+                ]);
+
+                // Set Options
+                const options = {
+                    title: 'Ventas anuales de la zapateria pies contentos',
+                };
+
+                // Draw
+                const chart = new google.visualization.BarChart(document.getElementById('ventas_anuales'));
+                chart.draw(data, options);
+
+            }
+        </script>
+    </div>
+    <p></p>
+    <div id="venta3d" style="width:100%; max-width:600px; height:500px;">
+    </div>
+
+    <script>
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            // Set Data
+            const data = google.visualization.arrayToDataTable([
+                ['año', 'Ventas por categoria'],
+                ['zapato para chamba', 54.8],
+                ['zapato para javi', 1.6],
+                ['zapato de ivan', 60.4],
+                ['zapato para mimir', 23.9],
+                ['zapato de bañar', 5.5]
+            ]);
+
+            // Set Options
+            const options = {
+                title: 'Categotria de zapatos vendidos por año',
+                is3D: true
+            };
+
+            // Draw
+            const chart = new google.visualization.PieChart(document.getElementById('venta3d'));
+            chart.draw(data, options);
+
+        }
+    </script>
+    <p></p>
+    <p>Unidades de calzado importados en los ultimos 5 años</p>
+    <div id="grafica_lineas" style="width:100%; max-width:600px; height:500px;">
+        <script>
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+
+                // Set Data
+                const data = google.visualization.arrayToDataTable([
+                    ['Unidades de los ultimos 5 años', 'Unidades'],
+                    ['2019', 55],
+                    ['2020', 49],
+                    ['2021', 44],
+                    ['2022', 24],
+                    ['2023', 15],
+                    ['2024', 17]
+                ]);
+
+                // Set Options
+                const options = {
+                    title: 'Unidades importadas por año',
+                    hAxis: {title: 'Años'},
+                    vAxis: {title: 'Unidades de zapatos'},
+                    legend: 'none'
+                };
+
+                // Draw
+                const chart = new google.visualization.LineChart(document.getElementById('grafica_lineas'));
+                chart.draw(data, options);
+
+            }
+        </script>
+    </div>
+    <p></p>
+    <p>
+        <a href="inicio2.html">Volver a la pagina de inicio</a>
+    </p>
+</body>
+
+</html>

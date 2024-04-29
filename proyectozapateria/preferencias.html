@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferencias de usuario</title>
+    <script src="/JS/preferencias.js">
+
+    </script>
+</head>
+<body>
+    <h2>Preferencias de usuario</h2>
+    <hr />
+    <p>Se gestiona preferencias del usuario con la API web storage, loca storage</p>
+    <div id="div_nombre">Bienvenido usuario: </div>
+    <p></p>
+    <label for="nombre">Escriba su nombre</label>
+    <input type="text" id="nombre">
+    <p></p>
+    <!-- El for de label es para vincular con el select -->
+    <label for="color">Seleccione un color de fondo</label>
+    <select name="color" id="color">
+        <option value="white">Blanco</option>
+        <option value="lightgreen">Verde claro</option>
+        <option value="lightblue">Azul claro</option>
+    </select>
+    <p></p>
+    <label for="elegir_tamanio_letra"></label>
+    <select name="fontSize" id="fontSize">
+        <option value="small">Pequenio</option>
+        <option value="meduim">Mediano</option>
+        <option value="large">Grande</option>
+    </select>
+    <button onclick="guardar_preferencias()">Guardar referencias</button>
+</body>
+</html>

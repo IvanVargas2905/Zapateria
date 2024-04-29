@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario Registro</title>
+    <link rel="stylesheet" href="/CSS/estilos_generales.css">
+    <!-- Vincular con dodigo JS -->
+    <script src="/JS/validarformulario.js"></script>
+</head>
+<body>
+    <h2>Formulario de registro</h2>
+    <hr/>
+    <p>Proporcionar sus datos para quedar registrado como usuario.
+        Los usuario registrados pueden acceder a la tienda en linea
+        y recibir pormociones especiales.
+    </p>
+    <!-- action es para que se lo mandemos a alguien o algo, el onsubmit es para cuando mandamos los datos-->
+    <form action="pagina_receptora.php" method="get" onsubmit="return validarcontrasena()">
+        <!-- fieldset es para que se pueda agrupar y ponerle un titulo -->
+        <fieldset>
+            <legend>Registro de usuario</legend>
+        <label for="apellido">Escriba sus apellidos *</label>
+        <!-- Con el ctrl + Space, esto nos ayuda para ver que es lo que hay -->
+        <input type="text" name="apellido" id="apellido" required />
+        <p></p>
+        <label for="Email">Escriba su correo *</label>
+        <!-- Con el ctrl + Space, esto nos ayuda para ver que es lo que hay -->
+        <input type="email" name="Email" id="Email" required />
+        <p></p>    
+        <label for="nombre">Escriba su nombre *</label>
+        <!-- Con el ctrl + Space, esto nos ayuda para ver que es lo que hay -->
+        <input type="text" name="nombre" id="nombre" required />
+        <br/>
+        <br/>
+        <label for="contrasena">Contraseña *</label>
+        <!-- Con el ctrl + Space, esto nos ayuda para ver que es lo que hay -->
+        <input type="password" name="contrasena" id="contrasena" required />
+        <p></p>
+        <label for="contrasena2">Confirmar contraseña *</label>
+        <!-- Con el ctrl + Space, esto nos ayuda para ver que es lo que hay -->
+        <input type="password" name="contrasena2" id="contrasena2" required />
+        <p></p>
+        <label for="">Genero</label>
+        <!-- Radio es para que solo pueda seleccionar solo una de muchas -->
+        <input type="radio" name="Genere" id="genero" value="mujer" required />
+        <label for="genero">Mujer</label>
+        <!-- <input type="radio" name="Genere" id="genero_mujer" value="mujer"> -->
+        <input type="radio" name="Genere" id="genero" value="Hombre" required>
+        <label for="genero">Hombre</label>
+        <p></p>
+        <label for="fecha">fecha de nacimiento *</label>
+        <input type="date" name="fecha" id="fecha" required />
+        <p></p>
+        <label for="text">Color favorito</label>
+        <input type="color" name="color" id="color" required />
+        <p></p>
+        <label for="talla">Talla de calzado(cm)</label>
+        <input type="number" name="talla" id="talla" min="1" max="40" required />
+        <p></p>
+        <!-- esto es para que se pueda agarrar muchos con el ctrl -->
+        <label>Tipos de calzados fav</label>
+        <select name="tipo" id="tipo" multiple required>
+            <option value="botas">Botas</option>
+            <option value="sandalias">Sandalias</option>
+            <option value="tenis">Tenis</option>
+            <option value="zapatos">Zapatos</option>
+        </select>
+        <p></p>
+        <label for="formadepago">Forma de pago</label>
+
+        <input type="checkbox" name="pago_tarejta" id="pago_tarjeta" value="tarjeta">
+        <label for="pago_tarjeta">Tarjeta</label>
+
+        <!-- Lo separamos y le ponemos enlazdos como pago_ para que cuando le demos doble click se acomode solo al que le dasa -->
+        <input type="checkbox" name="pago_efectivo" id="pago_efectivo" value="efectivo">
+        <label for="pago_efectivo">Efectivo</label>
+
+        <input type="checkbox" name="pago_cheque" id="pago_cheque" value="cheque">
+        <label for="pago_cheque">Cheque</label>
+        <p></p>
+        <!-- el submit para mandar informacion y value es para boton -->
+        <input type="submit" value="  Registrar  ">
+    </fieldset>
+    </form>
+    <p></p>
+    <!-- le ponemos / para que encunetre en otra carpeta -->
+    <a href="/inicio2.html">Inicio</a>
+    <p></p>
+</body>
+</html>

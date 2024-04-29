@@ -1,0 +1,62 @@
+/* Estilos para la tabla de productos */
+
+/* Estilos generales a nivel de la tabla */
+/* Acceder a la tabla por su id */
+
+#calzado {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    /* Aqui estos son para los id que tiene */
+}
+
+#calzado td,
+#calzado th {
+    border: 1px solid #000000;
+    padding: 8px;
+}
+/* Cambiar color de fondo para filas pares */
+/* Even es para pares */
+#calzado tr:nth-child(even){
+    background-color: #0d00ff;
+}
+/* Indicar el ancho de columnas */
+#calzado td:nth-child(1){
+    width: 25%;
+}
+#calzado td:nth-child(2){
+    width: 50%;
+}
+#calzado td:nth-child(3){
+    width: 25%;
+}
+/* Resaltar una fila cuando el mouse esta posicionado */
+#calzado tr:hover{
+    background-color: blueviolet;
+}
+/* Estilos para renglon de encabezado */
+#calzado th {
+    /* Determinar el borde de cualquier lado */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+img:hover {
+    width: 200px;
+    height: 200px;
+}
+/* Esilos para la tabla de ofertas */
+#tabla_oferta td{
+    padding: 10px;
+}
+#tabla_oferta{
+    margin-left: auto;
+    margin-right: auto;
+}

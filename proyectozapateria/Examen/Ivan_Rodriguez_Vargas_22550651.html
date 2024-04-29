@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <link rel="stylesheet" href="Examen.css"> 
+</head>
+<body>
+        <p>Ivan Rodriguez Vargas 22550651</p> 
+    <main>
+        <div>
+            <label for="radio">Radio (r):</label> <!-- Etiqueta para el radio del cilindro -->
+            <input type="text" id="radio"> <!-- Datos del cilindro -->
+        </div>
+        <div>
+            <label for="altura">Altura (h):</label> <!-- Etiqueta para la altura del cilindro -->
+            <input type="text" id="altura"> <!-- Campo de entrada para la altura -->
+        </div>
+        <button onclick="calcularVolumen()">Calcular Volumen</button> <!-- Botón para calcular el volumen -->
+       <!-- Aqui llamamos a las variables que tienen el resultado -->
+        <p id="resultado"></p> 
+        <p id="contador"></p> 
+    </main>
+    <img src="/Imagen/cilindro.jpg" alt="Cilindro">
+    <script src="ExamenJs.js"></script> 
+</body>
+</html>
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapateria "Pies contentos"</title>
+    <link rel="stylesheet" href="../CSS/estilos_generales.css">
+    <!-- Aqui le damos el estilo a las cosas que vayamos a hacer, ejemplo es el color de los cuadros y los cuadros azules alado de los numeros -->
+    <Style>
+        /* Esto se pone como comentario ya que ya lo estamos manejando en en el css */
+        /* body {
+            padding: 20px;
+        } */
+
+        ul li {
+            /* Aqui el "margin: ;", nos ayuda para que se separen los cuadros, el marco es por fuera */
+            display: inline;
+            padding: 15px;
+            background-color: rgb(170, 251, 170);
+            margin: 10px;
+        }
+
+        /* Se le asiga algunas cosas de la manera de abajo */
+        table td {
+            border: 2px solid blue;
+            padding: 15px;
+        }
+
+        footer {
+            /*  esto es para lo que se llama footer, es para los margenes del pie de pagina */
+            padding-top: 20px;
+            background-color: blueviolet;
+        }
+    </Style>
+</head>
+
+<body>
+    <h2>Pies Contentos</h2>
+    <hr />
+    <br />
+    <p>Pies contentos y fuertes es nuestro lema!</p>
+    <br />
+    <ul>
+
+        <!-- Esto lo separamos para la vinculacion -->
+        <li>
+            <a href="quienessomos.html">
+                Quienes somos?
+            </a>
+        </li>
+        <!-- Con todo esto es para la vinculacion, junto con el archivo quienessomos. -->
+        <li>
+            <a href="../productos/pagina_productos.html">
+                Productos
+            </a>
+        </li>
+        <li>
+            <a href="/PaginasPHP/tallas_calzado.php">Tallas</a>
+        </li>
+        <li>Carrito de compras</li>
+        <li>
+            <a href="/Sesiones/iniciar_sesion.html">Iniciar sesion</a>
+        </li>
+        <li>
+            <a href="Registro/formularioregistro.html">Registro</a>
+        </li>
+        <li>
+            <a href="calculadoraimc.html">Calculadora IMC</a>
+        </li>
+        <li>
+        <a href="preferencias.html">Preferencias</a>    
+        </li>
+        <li>
+            <a href="../PaginasPHP/personal.php">Personal</a>
+        </li>
+    </ul>
+    <!-- Hacer lista pero no ordenadas -->
+    <br><br>
+    <!-- Esta es una tabla HTML -->
+    <table>
+        <tr>
+            <td>
+                <p>Productos garantizados por su calidad, nos respalda la evauacion de nuestros clientes y 30 anios de
+                    trayectoria</p>
+                <p>Nuestros pilares son:</p>
+                <!-- la etiqueta p es para saber la division de parrafos -->
+                <ol type="i">
+                    <!-- el type es para las listas, tengan ya sea el metodo de ordenamiento -->
+                    <li>Las recomendaciones de nuestros clientes</li>
+                    <li>La calidad del producto</li>
+                    <li>30 años de servicio</li>
+                    <li>Devoluciones y aclaraciones</li>
+                </ol>
+            <td><img src="Imagen/rm.jpg" alt="Foto" style="width:255px;height:255px;"></td>
+            </td>
+            <td>
+                <video width="320" height="240" autoplay>
+                    <source src="Videos/Videos.mp4" type="video/mp4" autoplay>
+                    <source src="Videos/Videos.mp4" type="video/mp4" autoplay>
+            </td>
+            <!-- Para una ayuda podemos poner la palabra imagen y despues lo que queramos, esto nos ayuda para imagenes que tengamos en la pc, pero solo sirve para local, syle nos srive para lo ancho y alto, aqui podemos poner la foto original y asi podemos ver la foto reducida a lo que quermemos pero toda la foto-->
+            <td>
+                <audio controls autoplay>
+                    <source src="Audios/Auido.mp3" autoplay>
+                    <source src="Audios/Auido.mp3" autoplay>
+
+            </td>
+            <td>
+                <p>Amo mucho a mi tilina, estoy muy orgulloso de lo que hace y su fuerza</p>
+                <object width="0%" height="5px" data=""></object>
+                <object data="Imagen/Tilina2.jpg"></object>
+            </td>
+            <td>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=qGTSXQScOn4 " frameborder="0" allowfullscreen>
+                </iframe> -->
+                <a href="https://www.youtube.com/watch?v=qGTSXQScOn4" target="_blank">Aqui esta el video de yutub<img
+                        src="Imagen/carro.jpg" alt=""></a>
+            </td>
+        </tr>
+    </table>
+    <!-- Les pongo el "/" porque son solo para un uso y es mas profesional -->
+    <br />
+    <br />
+    <object width="100%" height="500px" data="quienessomos.html"></object>
+    <footer>
+        Todos los derechos reservados &copy;
+        <!-- Esto es para que solo se vea el signo para los derechos de autor -->
+        &nbsp;
+        &nbsp;
+        <!-- Lo de arriba es para dejar espacios en blanco -->
+        Pies contentos es una marca registrada&reg;
+        <!-- Signo para marca registrada -->
+        &nbsp;
+        &nbsp;
+        Fecha de lanzamiento 08/02/2024
+    </footer>
+</body>
+
+</html>

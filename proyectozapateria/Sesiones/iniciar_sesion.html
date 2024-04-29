@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iniciar Sesion</title>
+    <link rel="stylesheet" href="/CSS/estilos_generales.css">
+</head>
+<body>
+    <h2>Inicio de Sesion</h2>
+</hr>
+    <p>Escribir nombre y clave para iniciar sesion</p>
+    <!-- El get es por el url y el post le muestra los datos, los dos manda los datos -->
+    <form action="validar_sesion.php" method="post">
+        <label for="nombre_usuario">Nombre de usuario</label>
+        <input type="text" name="nombre_usuario" id="nombre_usuario" required>
+        <p></p>
+        <label for="clave_usuario">Clave</label>
+        <input type="password" name="clave_usuario" id="clave_usuario" required>
+        <p></p>
+        <input type="submit" value="Iniciar sesion">
+        <p></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilos_generales.css">
+    <title>Calculadora IMC</title>
+
+    <script>
+        function calcularIMC(){
+            // document nos deja entrar a todo el archivo HTMl, el value es para extaer el valor del campo
+            // var es para declarar una variable
+            var peso = document.getElementById("peso").value;
+            var altura = document.getElementById("altura").value;
+            var imc = peso / (altura * altura);
+            // alert es para mostrar un mensaje emergente
+            // alert("Tu IMC es: " + imc);
+            /* Acceder al parrafo resultado */
+            // Con lo de abajo vinculamos el parrafo_resultado con el id parrafo
+            var parrafo_resultado = document.getElementById("parrafo");
+            // Asignar contenido al parrafo, que texto va a tener
+            parrafo_resultado.innerHTML = "Tu IMC es: " + imc;
+            /* Obtener interpretacion de IMC */
+            var interpretacion = "";
+            if(imc < 18.5){
+                interpretacion = "Peso bajo";
+                parrafo_resultado.style.backgroundColor = "yellow";
+        }
+            else if(imc >= 18.5 && imc <= 24.9){
+                interpretacion = "Peso normal";
+                //Cambiar el color del parrafo segun la interpretacion
+                // con el syle ayuda para selccionar un color, con el punto es para seleccionar el color
+                parrafo_resultado.style.backgroundColor = "green";
+            }
+            else if(imc > 24.9){
+                interpretacion = "Sobrepeso";
+                parrafo_resultado.style.backgroundColor = "red";
+            }
+            // salto de linea con <br/> y despues concatenamos la interpretacion el += es para acortar el codigo, es igual a parrafo_resultado.innerHTML = parrafo_resultado.innerHTML + "<br/>" + interpretacion;
+            parrafo_resultado.innerHTML += "<br/>" + interpretacion;
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculadora de IMC</h2>
+    <hr/>
+    <!-- El sup es para los cuadrados -->
+    <p>Calcular tu indice de masa corporal para tener una idea de su salud: IMC = peso(kg) / altura(m)<sup>2</sup></p>
+    <p></p>
+    <p>El índice de masa corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. El IMC es una medida útil para identificar el sobrepeso y la obesidad en adultos. El IMC es un indicador de la obesidad, pero no es un diagnóstico médico. Para determinar si el IMC es un indicador de la obesidad, un médico realizará otros exámenes.</p>
+    <label for="peso">Peso (Kg)</label>
+    <!-- Es una ayuda de entrada, texto de ayuda (placeholder) -->
+    <input type="text" name="peso" id="peso" placeholder="Escribe tu peso">
+    <p></p>
+    <label for="altura">Altura (mts)</label>
+    <input type="text" name="altura" id="altura" placeholder="Escribe tu altura">
+    <p></p>
+    <!-- onclikc es de javaS, es manejador de eventos -->
+    <input type="button" value="   Calcular   " onclick="calcularIMC()">
+    <p></p>
+    <hr/>
+    <p id="parrafo">Resultado IMC</p>
+    <p></p>
+    <a href="../inicio2.html">Volver a inicio</a>
+
+</body>
+</html>

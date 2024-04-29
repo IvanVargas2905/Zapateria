@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar personal</title>
+    <link rel="stylesheet" href="../css/estilos_generales.css">
+</head>
+<body>
+    <h2>Agregar Personal</h2>
+    <hr>
+    <p>Se agrega personal a la base de datos de Pies Contentos</p>
+    <form action="agregar_personal.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <p></p>
+        <label for="puesto">Puesto:</label>
+        <input type="text" name="puesto" id="puesto" required>
+        <p></p>
+        <label for="salario">Salario:</label>
+        <input type="text" name="salario" id="salario" required>
+        <p></p>
+        <label for="IdDepto">Departamento:</label>
+        <select name="IdDepto" id="IdDepto">
+            <option value="10">Ventas</option>
+            <option value="20">Producción</option>
+            <option value="30">Recursos Humanos</option>
+            <option value="40">Mercadotecnia</option>
+        </select>
+        <p></p>
+        <label for="foto">Nombre de la Foto:</label>
+        <input type="text" name="foto" id="foto" required>
+        <p></p>
+        <input type="file" name="archivo_foto" id="archivo_foto">
+        <p></p>
+        <input type="submit" value="   Agregar   ">
+    </form>
+    <p></p>
+    <a href="../inicio2.html">Regresar a la pagina de inicio</a>
+    <p></p>
+    <a href="personal.php">Regresar a la pagina personal</a>
+</body>
+</html>
